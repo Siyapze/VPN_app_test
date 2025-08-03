@@ -50,6 +50,12 @@ dependencies:
   # Firebase Storage for media uploads
   firebase_storage: ^12.3.4
 
+  # Firebase Cloud Messaging for push notifications
+  firebase_messaging: ^15.1.4
+
+  # Flutter Local Notifications for foreground notifications
+  flutter_local_notifications: ^18.0.1
+
   # Shared Preferences for local storage
   shared_preferences: ^2.3.3
 
