@@ -1,4 +1,4 @@
-package com.example.first_test_app
+package com.example.stressless_vpn
 
 import io.flutter.embedding.android.FlutterActivity
 

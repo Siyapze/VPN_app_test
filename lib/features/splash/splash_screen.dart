@@ -72,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF42a5f5), // Match splash background
+      backgroundColor: const Color(0xFF1565C0), // Match VPN theme
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: Center(
@@ -102,9 +102,9 @@ class _SplashScreenState extends State<SplashScreen>
                           ],
                         ),
                         child: const Icon(
-                          Icons.flutter_dash,
+                          Icons.vpn_key,
                           size: 60,
-                          color: Color(0xFF42a5f5),
+                          color: Color(0xFF1565C0),
                         ),
                       ),
                       const SizedBox(height: 30),

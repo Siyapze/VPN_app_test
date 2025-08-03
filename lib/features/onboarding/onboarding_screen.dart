@@ -14,32 +14,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<OnboardingPage> _pages = [
     OnboardingPage(
-      icon: Icons.rocket_launch,
+      icon: Icons.vpn_key,
       title: 'Welcome to ${AppConstants.appName}',
       description:
-          'Discover amazing features and capabilities that will enhance your experience.',
-      color: const Color(0xFF42a5f5),
+          'Access the free internet with our secure VPN service. Break through restrictions and browse safely.',
+      color: const Color(0xFF1565C0),
     ),
     OnboardingPage(
       icon: Icons.security,
-      title: 'Secure & Private',
+      title: 'Military-Grade Security',
       description:
-          'Your data is protected with enterprise-grade security and privacy features.',
-      color: const Color(0xFF1976d2),
+          'Your connection is protected with AES-256 encryption. Browse anonymously with complete privacy.',
+      color: const Color(0xFF0D47A1),
     ),
     OnboardingPage(
-      icon: Icons.smart_toy,
-      title: 'AI-Powered',
+      icon: Icons.public,
+      title: 'Global Access',
       description:
-          'Experience the power of AI integration with OpenRouter for intelligent interactions.',
-      color: const Color(0xFF0d47a1),
+          'Connect to servers worldwide. Access blocked websites, social media, and streaming services.',
+      color: const Color(0xFF1976D2),
     ),
     OnboardingPage(
-      icon: Icons.notifications_active,
-      title: 'Stay Connected',
+      icon: Icons.timer,
+      title: AppConstants.freeTrialText,
       description:
-          'Receive real-time notifications and stay updated with the latest features.',
-      color: const Color(0xFF1565c0),
+          'Start with a 3-day free trial. Experience premium features before subscribing.',
+      color: const Color(0xFF4CAF50),
     ),
   ];
 
@@ -70,11 +70,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   void _completeOnboarding() {
-    Navigator.of(context).pushReplacementNamed('/home');
+    Navigator.of(context).pushReplacementNamed('/auth');
   }
 
   void _skipOnboarding() {
-    Navigator.of(context).pushReplacementNamed('/home');
+    Navigator.of(context).pushReplacementNamed('/auth');
   }
 
   @override
