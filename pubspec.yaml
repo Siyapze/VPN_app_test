@@ -56,6 +56,9 @@ dependencies:
   # HTTP requests
   http: ^1.2.2
 
+  # JSON annotation for serialization
+  json_annotation: ^4.9.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -69,6 +72,10 @@ dev_dependencies:
 
   # Native splash screen generator
   flutter_native_splash: ^2.4.1
+
+  # JSON serialization code generation
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.13
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

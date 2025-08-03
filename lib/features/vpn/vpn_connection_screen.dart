@@ -4,6 +4,7 @@ import '../../core/services/auth_service.dart';
 import '../../data/models/vpn_server.dart';
 import '../../data/models/user_model.dart';
 import '../../core/constants/app_constants.dart';
+import '../ai/ai_chat_screen.dart';
 
 class VpnConnectionScreen extends StatefulWidget {
   const VpnConnectionScreen({super.key});
@@ -251,6 +252,15 @@ class _VpnConnectionScreenState extends State<VpnConnectionScreen>
         foregroundColor: Colors.white,
         elevation: 0,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.smart_toy),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AIChatScreen()),
+              );
+            },
+            tooltip: 'AI Assistant',
+          ),
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
