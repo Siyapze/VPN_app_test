@@ -106,7 +106,8 @@ class AuthService {
       if (googleUser == null) return null; // User cancelled
 
       // Obtain the auth details from the request
-      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
 
       // Create a new credential
       final credential = GoogleAuthProvider.credential(
@@ -143,6 +144,19 @@ class AuthService {
       return credential;
     } catch (e) {
       print('Anonymous sign in error: $e');
+      rethrow;
+    }
+  }
+
+  /// Send password reset email
+  Future<void> resetPassword(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      print('Password reset error: ${e.message}');
+      rethrow;
+    } catch (e) {
+      print('Unexpected password reset error: $e');
       rethrow;
     }
   }

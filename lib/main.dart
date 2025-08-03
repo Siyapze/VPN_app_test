@@ -7,6 +7,7 @@ import 'features/onboarding/onboarding_screen.dart';
 import 'features/auth/auth_wrapper.dart';
 import 'features/auth/login_screen.dart';
 import 'features/auth/signup_screen.dart';
+import 'features/auth/forgot_password_screen.dart';
 import 'core/constants/app_constants.dart';
 
 void main() async {
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/auth': (context) => const AuthWrapper(),
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignUpScreen(),
+        '/forgot-password': (context) => const ForgotPasswordScreen(),
         '/home': (context) => const HomeScreen(),
       },
     );
